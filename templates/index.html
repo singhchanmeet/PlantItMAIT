@@ -138,7 +138,14 @@
         <h1 class="stripHeading centred">
             PLANT A TREE IN YOUR LOCATION
         </h1>
-        <div class="centred">
+
+        <form name="search" method="get" action="/searchlocation/">
+            {% csrf_token %}
+            <input type="search" placeholder="Search Location" name="query" id="search">
+            <button type="submit">Search</button>
+        </form>
+
+        {% comment %} <div class="centred">
             <input class="searchbar" type="text" placeholder="Enter your Location">
             <div class="dropdown">
                 <button class="dropbtn">Location</button>
@@ -153,7 +160,7 @@
             <div>
                 <input id="inputbtnml" class="btn" type="submit" value="Search">
             </div>
-        </div>
+        </div> {% endcomment %}
     </div>
 
     <div id="strip6">
@@ -161,12 +168,19 @@
         <h1 class="stripHeading centred">
             FIND THE RIGHT PLANT
         </h1>
-        <div class="centred">
+
+        <form name="search" method="get" action="/searchplant/">
+            {% csrf_token %}
+            <input type="search" placeholder="Search Plant" name="query" id="searchplant">
+            <button type="submit">Search</button>
+        </form>
+
+        {% comment %} <div class="centred">
             <input class="searchbar" type="text" placeholder="Enter your requirements">
             <div>
                 <input id="inputbtnml" class="btn" type="submit" value="Search">
             </div>
-        </div>
+        </div> {% endcomment %}
     </div>
     
 

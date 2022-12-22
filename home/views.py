@@ -29,9 +29,16 @@ def plantfinder(request) :
     
     return render(request, 'plantfinder.html', {'plants': Plant.objects.all()})
 
-def search(request) :
+def searchlocation(request) :
     plant=request.GET.get('query')
     print("eefhefhe")
     print(plant)
     print("cvehbjn")
-    return render(request,'search.html', {'plants': Plant.objects.filter(location__icontains=plant)})
+    return render(request,'searchlocation.html', {'plants': Plant.objects.filter(location__icontains=plant)})
+
+def searchplant(request) :
+    plant=request.GET.get('query')
+    print("eefhefhe")
+    print(plant)
+    print("cvehbjn")
+    return render(request,'searchplant.html', {'plants': Plant.objects.filter(plant_name__icontains=plant)})

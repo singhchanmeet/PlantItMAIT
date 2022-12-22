@@ -34,4 +34,4 @@ def search(request) :
     print("eefhefhe")
     print(plant)
     print("cvehbjn")
-    return render(request,'search.html', {'plants': Plant.objects.filter(plant_name__icontains=plant)})
+    return render(request,'search.html', {'plants': Plant.objects.filter(location__icontains=plant)})

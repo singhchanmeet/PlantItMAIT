@@ -58,10 +58,14 @@
                 <p> {{i.plant_name}} </p>
                 {% comment %} {{i.plant_pic.url}} {% endcomment %}
                 <img src="{{i.plant_pic.url}}">
+                {{i.medicinal_use}}
+                {{i.plant_description}} <br>
+                {{i.scientific_mail}} <br>
                 {{i.season}} <br>
                 {{i.soil}} <br>
                 {{i.location}} <br>
                 {{i.cost}} <br>
+                <br> <br> <br>
                 <br> <br> <br>
             {% endfor %}
 

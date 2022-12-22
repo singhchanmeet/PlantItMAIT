@@ -44,7 +44,7 @@
         <header>
             <div>
                 <a href="/index">
-                    {% load static %} <img id="logo" src="{% static "/media/logo.jpg" %}" alt="PLANTit">
+                    {% load static %} <img id="logo" src="{% static "/media/logo2.png" %}" alt="PLANTit">
                 </a>
             </div>
             <br>
@@ -68,10 +68,10 @@
 
     <div id="strip2">
         <div>
-            <div id="mainImage">
+            {% comment %} <div id="mainImage">
                 {% load static %} <img src="{% static "/media/plant1.jpg" %}" alt="img">
 
-            </div>
+            </div> {% endcomment %}
             <h1><strong id="mainHeading" class="text">PLANTit</strong>
             </h1>
             <h2 id="motto">
@@ -92,7 +92,7 @@
             <a id="plantitButton" href="">PLANT A TREE</a>
             <a id="plantitButton" href="/plantfinder">PLANT FINDER</a>
         </div>
-        <br>
+        <br><br>
 
     </div>
 
@@ -129,7 +129,7 @@
         <h1 class="stripHeading centred">
             PLANTATION GUIDE
         </h1>
-        <img src="timeline" alt="timeline">
+        {% load static %}<img id="timelineimg" src="{% static "/media/timeline.jpeg" %}" alt="timeline">
 
     </div>
 
@@ -262,7 +262,7 @@
 
             <a href="/index">
                 <div>
-                    {% load static %} <img id="logoDown" src="{% static "/media/logo.jpg" %}" alt="PLANTit">
+                    {% load static %} <img id="logoDown" src="{% static "/media/logo2.png" %}" alt="PLANTit">
                 </div>
                 <div>
                     <strong>PLANTit</strong>

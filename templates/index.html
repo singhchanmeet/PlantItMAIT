@@ -106,19 +106,19 @@
         <h2 class="stripSubHeading centred">Let's Get Started</h2>
         <div class="container">
             <div class="item"><a href=""></a>
-                {% load static %}<img class="fleximg" src="{% static "/media/custom (1).png" %}" alt="1">PLANTATION
+                {% load static %}<img class="fleximg" src="{% static "/media/plantationguide.png" %}" alt="1">PLANTATION
                 GUIDE
             </div>
             <div class="item">
-                {% load static %}<img class="fleximg" src="{% static "/media/custom (2).png" %}" alt="2">PLANT A TREE
+                {% load static %}<img class="fleximg" src="{% static "/media/plantlocation.png" %}" alt="2">PLANT A TREE
                 IN YOUR LOCATION
             </div>
             <div class="item">
-                {% load static %}<img class="fleximg" src="{% static "/media/custom (3).png" %}" alt="3">FIND THE RIGHT
+                {% load static %}<img class="fleximg" src="{% static "/media/rightplant.png" %}" alt="3">FIND THE RIGHT
                 PLANT
             </div>
             <div class="item">
-                {% load static %}<img class="fleximg" src="{% static "/media/custom (4).png" %}" alt="4">CHAT WITH
+                {% load static %}<img class="fleximg" src="{% static "/media/chatcommunity.png" %}" alt="4">CHAT WITH
                 COMMUNITY
             </div>
 
@@ -139,13 +139,13 @@
         <h1 class="stripHeading centred">
             PLANT A TREE IN YOUR LOCATION
         </h1>
-
-        <form name="search" method="get" action="/searchlocation/">
-            {% csrf_token %}
-            <input type="search" placeholder="Search Location" name="query" id="search">
-            <button type="submit">Search</button>
-        </form>
-
+        <section class="centred searchbar">
+            <form name="search" method="get" action="/searchlocation/">
+                {% csrf_token %}
+                <input type="search" placeholder="Search Location" name="query" id="search">
+                <button type="submit">Search</button>
+            </form>
+        </section>
         {% comment %} <div class="centred">
             <input class="searchbar" type="text" placeholder="Enter your Location">
             <div class="dropdown">
@@ -169,13 +169,13 @@
         <h1 class="stripHeading centred">
             FIND THE RIGHT PLANT
         </h1>
-
-        <form name="search" method="get" action="/searchplant/">
-            {% csrf_token %}
-            <input type="search" placeholder="Search Plant" name="query" id="searchplant">
-            <button type="submit">Search</button>
-        </form>
-
+        <section class="centred searchbar">
+            <form name="search" method="get" action="/searchplant/">
+                {% csrf_token %}
+                <input type="search" placeholder="Search Plant" name="query" id="searchplant">
+                <button type="submit">Search</button>
+            </form>
+        </section>
         {% comment %} <div class="centred">
             <input class="searchbar" type="text" placeholder="Enter your requirements">
             <div>
